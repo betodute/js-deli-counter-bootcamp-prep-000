@@ -1,9 +1,6 @@
-var deliNumbers = 0;
-
-function takeANumber (katzDeliLine, name = "customer") {
+function takeANumber (katzDeliLine, name) {
   katzDeliLine.push(name);
-  deliNumbers += 1;
-  return `Welcome, ${name}. You're number is ${deliNumbers}. You are ${katzDeliLine.length} in line.`;
+  return `Welcome, ${name}. You are ${katzDeliLine.length} in line.`;
 }
 
 function nowServing(katzDeliLine) {
@@ -19,8 +16,7 @@ function currentLine(katzDeliLine) {
   if (katzDeliLine > tempLine) {
     for (var i=0; i<katzDeliLine.length; i++) {
      tempLine.push(` ${i+1}. ${katzDeliLine[i]}`);
-     return "The line is currently" + tempLine;
-    }
+    } return "The line is currently" + tempLine;
   } else {
    return "The line is currently empty.";
   }
